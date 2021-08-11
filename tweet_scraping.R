@@ -18,4 +18,6 @@ df$text <- gsub('[0-9]+', '', df$text)
 df$text <- str_replace_all(df$text, "[[:punct:]]", " ")
 df$text <- tolower(df$text)
 
+write.csv(df, "cuomo_tweets.csv", row.names = FALSE)
+
 
